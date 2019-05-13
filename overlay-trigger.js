@@ -26,20 +26,31 @@ document.getElementsByTagName("body")[0].innerHTML += `<div id="overlay" style="
                                                             padding: 20px;
                                                             ">
                                                               <h1>Get this ${name} for $${discountPrice} with a 15% discount!</h1>
+                                                              <br>
+                                                              <button onclick="window.location.href = 'https://www.marmot.com/cart';">Go to Cart</button>
+                                                              <button onclick="closeModal()">Close</button>
                                                           </div>
                                                       </div>`
 
 function handleSizeClick(e){
   e.preventDefault()
-  let target = e.target.innerText
-  if(target === "S" || target === "M" || target === "L" || target === "XL" || target === "XXL"){
-    clickedSize()
+  let available = e.target.attributes[3].nodeValue
+  if(available === "Available"){
+    openModal()
   } else {
     console.log("not size")
   }
 }
 
-function clickedSize(){
+function openModal(){
   document.getElementById("overlay").style.display = "block";
   document.getElementById("modal").style.display = "block";
 }
+
+function closeModal(){
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById("modal").style.display = "none";
+}
+
+
+//how to check if something is on sale and then trigger (or not trigger?) the overlay - avoid NaN

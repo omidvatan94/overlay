@@ -1,7 +1,9 @@
 document.addEventListener('click', handleSizeClick)
 
-function handleSizeClick(e){
-  console.log(e)
+function handleSizeClick(event){
+  console.log(event.target.attributes[3].nodeValue)
 }
 
 var list = document.querySelectorAll('[aria-label="Available"]');
+
+event.target.attributes.3.nodeValue = "Available"

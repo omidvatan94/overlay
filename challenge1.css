@@ -1,0 +1,136 @@
+/*************************
+ *  your code goes here  *
+ *************************/
+
+.bx-type .bx-creative-1 {
+  background-color: #ffc216;
+  width: 768px;
+  min-height: 600px;
+  position: relative;
+}
+
+.bx-close-circle {
+  visibility: hidden;
+}
+
+.overlay-header {
+  position: relative;
+}
+
+#logo {
+  width: 40%;
+  margin-top: 20px;
+}
+
+#corner {
+  background: linear-gradient(to right, #FFCA00 0%, #FFB803 100%);
+  position: absolute;
+  top: -50% !important;
+  right: -25% !important;
+  width: 330px;
+  height: 190px;
+  -webkit-transform: rotate(50deg);
+      -ms-transform: rotate(50deg);
+          transform: rotate(50deg);
+  box-shadow: 0px 8px 57px 0px rgba(0,0,0,0.3);
+}
+
+#lock {
+  position: absolute;
+  z-index: 1;
+  width: 60px;
+  height: auto;
+  margin-top: 10px;
+  right: 2% !important;
+}
+
+.bx-row-subheadline-1 {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  color: #000066;
+  margin-top: 50px !important;
+}
+
+.bx-row-headline-1, .bx-row-headline-2 {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #000066;
+}
+
+.bx-row-headline-2 {
+  font-size: 87px;
+  margin-top: -40px !important;
+}
+
+.bx-row-email input {
+  width: 60% !important;
+  text-align: center;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: lighter;
+  border-color: white !important;
+  box-shadow: inset 0px 0px 5px #888888, 0px 6px 5px -2px #888888;
+}
+
+.bx-row-submit {
+  position: relative;
+}
+
+#arrow {
+  height: 80px;
+  position: absolute;
+  top: 5% !important;
+  right: 67% !important;
+  z-index: 3
+}
+
+#submit {
+  background: linear-gradient(#2557a6, #000070);
+  width: 60%;
+  height: 80px;
+  font-size: 40px;
+  box-shadow: 0 5px 10px -5px black;
+}
+
+@media only screen and (max-width: 786px) {
+
+.bx-type .bx-creative-1  {
+  width: 320px;
+  min-height: 350px;
+}
+
+#lock {
+  width: 40px;
+  height: auto;
+}
+
+.bx-row-headline-1, .bx-row-headline-2 {
+  font-size: 30px;
+}
+.bx-row-headline-2 {
+  margin-top: -20px !important;
+}
+
+.bx-row-subheadline-1 {
+  font-size: 20px;
+}
+
+#corner, .bx-close-circle:after {
+  display: none;
+}
+
+#arrow {
+  visibility: hidden;
+}
+
+.bx-row-email input {
+  width: 100% !important;
+  height: 50px;
+}
+
+#submit {
+  width: 100% !important;
+  font-size: 25px;
+  height: 50px;
+}

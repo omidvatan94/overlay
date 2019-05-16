@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BX Overlay Challenge</title>
+    <link href="normalize.css" rel="stylesheet" media="screen" type="text/css"/>
+    <link href="bx-reset.css" rel="stylesheet" media="screen" type="text/css">
+    <link href="challenge1.css" rel="stylesheet" media="screen" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+
+<body class="bx-client-lufthansa">
+
+    <div class="container">
+        <header>
+            <h3>Challenge 1 — Lufthansa</h3>
+        </header>
+        <div class="main clearfix">
+            <button class="bx-trigger">Show Overlay_</button>
+        </div>
+    </div>
+
+    <div class="background-container">
+        <iframe src="http://www.lufthansa.com/" frameborder="0"></iframe>
+    </div>
+
+    <div class="bxc bx-type-overlay bx-effect-1">
+
+        <!-- background -->
+        <div class="bx-curtain"></div>
+
+        <!-- the overlay element -->
+        <div class="bx-type">
+
+        <div class="bx-creative bx-creative-1">
+            <a class="bx-close bx-close-circle"></a>
+
+            <div class="bx-step bx-step-1 bx-step-active">
+
+                <div class="bx-group bx-group-1">
+
+                  <!-- Created <div> to position logo, corner, and lock elements -->
+                  <!-- In this <div> I added <img> tags to display logo and lock assets, and a <div> to create the corner shadow -->
+                  <div class="overlay-header">
+                    <img id="logo" src="./lufthansa-logo_white.svg" alt="lufthansa logo">
+                    <div id="corner">
+                    </div>
+                    <img id="lock" src="./unlock.svg" alt="lock">
+                  </div>
+                  <!-- End .overlay-header -->
+
+                    <div class="bx-row bx-row-subheadline">
+                        <p class="bx-row-subheadline-1">Join Lufthansa’s newsletter to</p>
+                    </div>
+                    <div class="bx-row bx-row-headline">
+                        <p class="bx-row-headline-1">Unlock Exclusive</p>
+                    </div>
+                    <div class="bx-row bx-row-headline">
+                        <p class="bx-row-headline-2">Flight Offers</p>
+                    </div>
+                </div>
+
+                <div class="bx-group bx-group-2">
+                    <div class="bx-row bx-row-email">
+                        <input type="email" placeholder="Enter Email Here">
+                    </div>
+
+                    <div class="bx-row bx-row-submit">
+                      <!-- Added an <img> tag to display the arrow asset -->
+                        <img id="arrow" src="./arrow.svg" alt="arrow">
+                        <input id="submit" type="submit" value="Join Now">
+                    </div>
+                </div>
+
+            </div><!-- end .bx-step-1 -->
+
+        </div><!-- end .bx-creative -->
+
+    </div><!-- end .bxc -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+          var $body = $('body');
+
+          // activation event
+          $body.on('click', '.bx-trigger', function() {
+              $('.bxc').addClass('bx-impress');
+          });
+
+          // submit event
+          $body.on('click', '#submit', function() {
+              $('.bxc').removeClass('bx-impress');
+          });
+
+          // close event
+          $body.on('click', '.bx-close, .bx-close-text', function() {
+              $('.bxc').removeClass('bx-impress');
+          });
+
+      });
+    </script>
+</body>
+</html>

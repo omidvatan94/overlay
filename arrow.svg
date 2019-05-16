@@ -1,0 +1,21 @@
+<svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="199.125" height="219.03" viewBox="0 0 199.125 219.03">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        opacity: 0.62;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_3_copy" data-name="Rectangle 3 copy" class="cls-1" x="193.437" width="5.688" height="219.03"/>
+  <path id="Rectangle_3_copy_2" data-name="Rectangle 3 copy 2" class="cls-2" d="M747.67,1353.78l15.339,14.58,45.118-42.91-15.339-14.58Z" transform="translate(-699.719 -1226)"/>
+  <path id="Rectangle_3_copy_3" data-name="Rectangle 3 copy 3" class="cls-2" d="M699.708,1314.43l0.087,22.83,84.317,0.21-0.087-22.84Z" transform="translate(-699.719 -1226)"/>
+  <path class="cls-2" d="M744.652,1296.31l15.818-15.14L807,1325.69l-15.818,15.14Z" transform="translate(-699.719 -1226)"/>
+</svg>

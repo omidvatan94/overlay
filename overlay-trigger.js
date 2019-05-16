@@ -1,20 +1,20 @@
-let name = document.querySelector('.product-name').innerText
-let originalPrice = parseFloat(document.querySelector('.price-sales').innerText.replace('Sale Price:', '').replace('$', ''))
-let discountPrice = originalPrice - (originalPrice * .15)
+const name = document.querySelector('.product-name').innerText
+const originalPrice = parseFloat(document.querySelector('.price-sales').innerText.replace('Sale Price:', '').replace('$', ''))
+const discountPrice = parseFloat(originalPrice - (originalPrice * .15)).toFixed(2)
 
 document.addEventListener('click', handleSizeClick)
 document.getElementsByTagName("body")[0].innerHTML += `<div id="overlay" style="
-                                                        position: fixed; /* Sit on top of the page content */
-                                                        display: none; /* Hidden by default */
-                                                        width: 100%; /* Full width (cover the whole page) */
-                                                        height: 100%; /* Full height (cover the whole page) */
+                                                        position: fixed;
+                                                        display: none;
+                                                        width: 100%;
+                                                        height: 100%;
                                                         top: 0;
                                                         left: 0;
                                                         right: 0;
                                                         bottom: 0;
-                                                        background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-                                                        z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-                                                        cursor: pointer; /* Add a pointer on hover */
+                                                        background-color: rgba(0,0,0,0.5);
+                                                        z-index: 2;
+                                                        cursor: pointer;
                                                         ">
                                                           <div id="modal" style="
                                                             position: fixed;
@@ -28,7 +28,7 @@ document.getElementsByTagName("body")[0].innerHTML += `<div id="overlay" style="
                                                               <h1>Get this ${name} for $${discountPrice} with a 15% discount!</h1>
                                                               <br>
                                                               <button onclick="window.location.href = 'https://www.marmot.com/cart';">Go to Cart</button>
-                                                              <button onclick="closeModal()">Close</button>
+                                                              <button onclick="closeModal()" style="float:right">Close</button>
                                                           </div>
                                                       </div>`
 
@@ -37,8 +37,6 @@ function handleSizeClick(e){
   let available = e.target.attributes[3].nodeValue
   if(available === "Available"){
     openModal()
-  } else {
-    console.log("not size")
   }
 }
 
@@ -51,6 +49,3 @@ function closeModal(){
   document.getElementById("overlay").style.display = "none";
   document.getElementById("modal").style.display = "none";
 }
-
-
-//how to check if something is on sale and then trigger (or not trigger?) the overlay - avoid NaN
